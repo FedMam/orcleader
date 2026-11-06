@@ -13,4 +13,25 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <!-- == PARQUET == -->
+        <dependency>
+            <groupId>org.apache.parquet</groupId>
+            <artifactId>parquet-avro</artifactId>
+            <version>1.18.1</version> <!-- Check Maven Central for the latest version -->
+        </dependency>
+        <!-- Parquet's Java readers/writers rely on Hadoop classes at runtime -->
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>3.5.0</version> <!-- Choose a compatible Hadoop version -->
+        </dependency>
+
+        <!-- == ORC == -->
+        <dependency>
+            <groupId>org.apache.orc</groupId>
+            <artifactId>orc-core</artifactId>
+            <version>2.3.1</version> <!-- Check Maven Central for the latest version -->
+        </dependency>
+    </dependencies>
 </project>
